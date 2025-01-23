@@ -5,7 +5,7 @@ const mongoose=require('mongoose')
 const { v4: uuidv4 } = require('uuid');
 const PORT=8000
 
-const mongourl="mongodb://localhost:27017/admin"
+const mongourl=("mongodb+srv://harshithas2023it:harshitha2006@expense-tracker.qjp50.mongodb.net/et")
 mongoose
    .connect(mongourl)
    .then(()=>{
@@ -76,3 +76,4 @@ app.delete("/api/expenses/:id", async (req, res) => {
         res.status(500).json({ message: "Error deleting expense", error });  
     }  
 });
+
